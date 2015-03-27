@@ -10,7 +10,27 @@ destination: ./dist
 # For Index Page
 index:
     - category: 'Getting Started'
-      articles: { terminology: Terminology, integration: Integration }
+      articles:
+      - Terminology: 'terminology'
+      - What are various formats of notifications?: 'what-are-various-formats-of-notifications'
+      - How can I test things out before pushing it in production? (tell about different environments): 'how-can-i-test-things-out-before-pushing-it-in-production'
+      - How do I integrate the Javascript widget on my website?: 'how-do-i-integrate-the-javascript-widget-on-my-website'
+      - How to calculate the required hash of uid?: 'how-to-calculate-the-required-hash-of-uid'
+      - How to send a notification?: 'how-to-send-a-notification'
+      - How to send a notification using API?: 'how-to-send-a-notification-using-api'
+      - How to setup proper campaigns?: 'how-to-setup-proper-campaigns'
+      - How to use variables in your notifications?: 'how-to-use-variables-in-your-notifications'
+    - category: 'FAQs'
+      articles:
+       - What does an app mean?: 'what-does-an-app-mean'
+       - What does a profile mean?: 'what-does-a-profile-mean'
+       - What does a horn mean?: 'what-does-a-horn-mean'
+       - What does a campaign mean?: 'what-does-a-campaign-mean'
+       - What does a segment mean?: 'what-does-a-segment-mean'
+       - What additional data can I save in profiles?: 'what-additional-data-can-i-save-in-profiles'
+       - When do I create a profile for an user?: 'when-do-i-create-a-profile-for-an-user'
+       - Where do I find the secret keys of my app?: 'where-do-i-find-the-secret-keys-of-my-app'
+
 
 # Google analytics
 google_analytics:

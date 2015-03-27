@@ -9,11 +9,13 @@ layout: default
       <div class="post">
         <h3 class="h3 post-title">{{ category.category }}</h3>
         <ul>
-          {% for article in category.articles %}
-            <li>
-              <a href="{{ article | prepend: '/articles/' | prepend: site.baseurl }}" class="post-link">
-                <h3 class="h4 post-title">{{ article }}</h3>
+          {% for article_hash in category.articles %}
+            <li style="list-style:none;">
+              {% for article in article_hash %}
+              <a href="{{ article[1] | prepend: '/articles/' | prepend: site.baseurl }}" class="post-link">
+                <p class="post-title" style="font-weight:300">{{ article[0] }}</p>
               </a>
+              {% endfor %}
             </li>
           {% endfor %}
         </ul>
