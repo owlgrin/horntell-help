@@ -1,9 +1,9 @@
 # Site settings
-title:       Horntell Docs
-email:       mohit.mamoria@gmail.com
+title:       Horntell | Help
+email:       hello@horntell.com
 author:      Mohit Mamoria
-description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
-baseurl:     "http://docs.horntell.com"
+description: "Interactive Push Notifications for your website"
+baseurl:     "/help"
 url:         "http://docs.horntell.com"
 destination: ./dist
 
