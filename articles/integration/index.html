@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Integration &#8211; Horntell Docs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="There are just 3 important terms in Horntell around which our whole discussion will revolve.">
+    <meta name="author" content="Mohit Mamoria">
+    
+    <link rel="canonical" href="http://localhost/horntell-guide/disthttp://localhost/horntell-guide/dist/articles/integration/">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="http://localhost/horntell-guide/dist/css/pixyll.css" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    
+
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Integration">
+    <meta property="og:description" content="A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff.">
+    <meta property="og:url" content="http://localhost/horntell-guide/dist/articles/integration/">
+    <meta property="og:site_name" content="Horntell Docs">
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+</head>
+
+<body class="">
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="http://localhost/horntell-guide/dist" class="site-title">Horntell Docs</a>
+      <nav class="site-nav right">
+        <a href="http://localhost/horntell-guide/dist/about/">About</a>
+<a href="http://localhost/horntell-guide/dist/contact/">Contact</a>
+
+      </nav>
+      <div class="clearfix"></div>
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+<div class="post-header mb2">
+  <h3>Integration</h3>
+  <p class="post-meta">There are just 3 important terms in Horntell around which our whole discussion will revolve.</p>
+  <span class="post-meta small">1 minute read</span>
+</div>
+
+<article class="post-content">
+  <h4>Environments</h4>
+
+<p>You, as an user, can manage multiple apps under same account. And each app has two environments - LIVE (for production) and TEST (for development and testing).</p>
+
+<p>Environments can be switched using the switch in the top-right corner.</p>
+
+<p><img src="http://localhost/horntell-guide/dist/images/environment.png" alt="environment-variable" /></p>
+
+<p>Let’s flip it into <strong>test environment</strong> and get going.</p>
+
+<h4>Integration</h4>
+
+<p>The important Keys and JS code snippet can be found in your account (under [APP] > Settings > Integrate): http://app.horntell.com/#/app/settings/integrate.</p>
+
+<p><img src="http://localhost/horntell-guide/dist/images/integration.png" alt="integration-code" /></p>
+
+<p>Integrate
+You’ll need to paste in the similar looking JS code snippet in all webpages on which you need the notification center. Because notifications are user-specific, you’ll need to pass in a few parameters to give it knowledge about the user:</p>
+
+<ol>
+<li><p><strong>uid</strong>: The unique identifier of the logged in user in your system. (Primary Key)</p></li>
+<li><p><strong>uid_hash</strong>: HMAC SHA256 hash of uid using the app’s secret as the salt. (security reasons)</p></li>
+<li><p><strong>signedup_at</strong>: UNIX timestamp in UTC when the user signed up in your app.</p></li>
+</ol>
+
+
+<p>Besides these required parameters, you can pass in additional optional data that will be added in the profile of the user. Why this additional data? Two reasons:</p>
+
+<p>You can use this data to segment your users and do some bulk actions (eg. notifying everyone who is on GOLD plan).</p>
+
+<p>You can use this data from your profiles to replace the variables in your campaigns/horns thus making a more personal impact.</p>
+
+<p>The complete details about various attributes of profile can be found at: http://docs.horntell.com/api/#profiles</p>
+
+</article>
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- <footer class="footer">
+  <div class="p2 wrap">
+    <div class="measure mt1 center">
+      <small>
+        Crafted with &lt;3 by <a href="http://johnotander.com">John Otander</a> (<a href="https://twitter.com/4lpine">@4lpine</a>).<br>
+        &lt;/&gt; available on <a href="https://github.com/johnotander/pixyll">Github</a>.
+      </small>
+    </div>
+  </div>
+</footer>
+
+
+ -->
+</body>
+</html>
