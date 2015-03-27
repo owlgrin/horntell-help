@@ -3,8 +3,8 @@
   <channel>
     <title>Horntell Docs</title>
     <description>A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff.</description>
-    <link>http://localhost/horntell-guide/disthttp://localhost/horntell-guide/dist/</link>
-    <atom:link href="http://localhost/horntell-guide/disthttp://localhost/horntell-guide/dist/feed.xml" rel="self" type="application/rss+xml" />
+    <link>guide.horntell.dev/dist/</link>
+    <atom:link href="guide.horntell.dev/dist/feed.xml" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>
