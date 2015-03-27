@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Horntell Docs</title>
-    <description>A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff.</description>
-    <link>http://localhost/horntell-guide/disthttp://localhost/horntell-guide/dist/</link>
-    <atom:link href="http://localhost/horntell-guide/disthttp://localhost/horntell-guide/dist/feed.xml" rel="self" type="application/rss+xml" />
+    <title>Horntell | Help</title>
+    <description>Interactive Push Notifications for your website</description>
+    <link>http://docs.horntell.app/help/dist/</link>
+    <atom:link href="http://docs.horntell.app/help/dist/feed.xml" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>
