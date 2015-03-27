@@ -3,8 +3,8 @@ title:       Horntell Docs
 email:       mohit.mamoria@gmail.com
 author:      Mohit Mamoria
 description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
-baseurl:     "http://localhost/horntell-guide/dist"
-url:         "http://localhost/horntell-guide/dist"
+baseurl:     "http://docs.horntell.com"
+url:         "http://docs.horntell.com"
 destination: ./dist
 
 # For Index Page
