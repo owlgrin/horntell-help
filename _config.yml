@@ -1,10 +1,16 @@
 # Site settings
-title:       Pixyll
-email:       your_email@example.com
-author:      John Otander
+title:       Horntell Docs
+email:       mohit.mamoria@gmail.com
+author:      Mohit Mamoria
 description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
-baseurl:     ""
-url:         "http://pixyll.com"
+baseurl:     "http://localhost/horntell-guide/dist"
+url:         "http://localhost/horntell-guide/dist"
+destination: ./dist
+
+# For Index Page
+index:
+    - category: 'Getting Started'
+      articles: { terminology: Terminology, integration: Integration }
 
 # Google analytics
 google_analytics:
@@ -43,10 +49,10 @@ share_reddit: false
 share_stumbleupon: false
 
 # Build settings
-markdown:     redcarpet
+markdown:     rdiscount
 redcarpet:
   extensions: ['smart', 'tables', 'with_toc_data']
 permalink:    pretty
-paginate:     3
+paginate:     10
 sass:
   compressed: true

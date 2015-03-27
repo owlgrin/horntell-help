@@ -5,22 +5,21 @@ layout: default
 <div class="home">
 
   <div class="posts">
-    {% for post in paginator.posts %}
+    {% for category in site.index %}
       <div class="post">
-        <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
-          <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
-          <h3 class="h2 post-title">{{ post.title }}</h3>
-          <p class="post-summary">
-            {% if post.summary %}
-              {{ post.summary }}
-            {% else %}
-              {{ post.excerpt }}
-            {% endif %}
-          </p>
-        </a>
+        <h3 class="h3 post-title">{{ category.category }}</h3>
+        <ul>
+          {% for article in category.articles %}
+            <li>
+              <a href="{{ article | prepend: '/articles/' | prepend: site.baseurl }}" class="post-link">
+                <h3 class="h4 post-title">{{ article }}</h3>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
       </div>
     {% endfor %}
   </div>
 
-  {% include pagination.html %}
+  <!-- {% include pagination.html %} -->
 </div>
