@@ -17,3 +17,5 @@ Our vision is that in this notification-driven world, notification should not on
 
 **Talk:** A talk horn allows you to add input interactivity to your notifications. The horn will be supported with an input box in which your user can type in the response. These are great to collect quick feedbacks and talk to your users.
 	![talk-notification]({{site.baseurl}}/images/articles/talk.png)
+
+Now, that you know about various notifications, why not try [customizing content of notification using HTML]({{site.baseurl}}/articles/how-to-customize-content-of-notification-using-html)?
