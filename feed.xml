@@ -3,8 +3,8 @@
   <channel>
     <title>Horntell | Help</title>
     <description>Interactive Push Notifications for your website</description>
-    <link>http://docs.horntell.app/help/dist/</link>
-    <atom:link href="http://docs.horntell.app/help/dist/feed.xml" rel="self" type="application/rss+xml" />
+    <link>http://docs.horntell.com/help/</link>
+    <atom:link href="http://docs.horntell.com/help/feed.xml" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>
