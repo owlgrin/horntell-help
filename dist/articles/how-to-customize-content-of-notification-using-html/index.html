@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Horntell | Help</title>
+    <title>How to customize content of notification using HTML? &#8211; Horntell | Help</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Interactive Push Notifications for your website">
+    <meta name="description" content="Why send just text, when you can send emoticons? ;)">
     <meta name="author" content="Mohit Mamoria">
     
-    <link rel="canonical" href="http://docs.horntell.com/help/">
+    <link rel="canonical" href="http://docs.horntell.com/help/articles/how-to-customize-content-of-notification-using-html/">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/help/css/pixyll.css" type="text/css">
@@ -25,9 +25,9 @@
     <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Horntell | Help">
+    <meta property="og:title" content="How to customize content of notification using HTML?">
     <meta property="og:description" content="Interactive Push Notifications for your website">
-    <meta property="og:url" content="http://docs.horntell.com/">
+    <meta property="og:url" content="http://docs.horntell.com/articles/how-to-customize-content-of-notification-using-html/">
     <meta property="og:site_name" content="Horntell | Help">
 
     <!-- Icons -->
@@ -93,73 +93,63 @@
 
     <div class="post p2 p-responsive wrap" role="main">
       <div class="measure">
-        <div class="home">
+        
 
-  <div class="posts">
-    
-      <div class="post">
-        <h3 class="h3 post-title">Getting Started</h3>
-        <ul>
-          
-            <li style="list-style:none;">
-              
-              <a href="/help/articles/terminology" class="post-link">
-                <p class="post-title" style="font-weight:300">Terminology</p>
-              </a>
-              
-            </li>
-          
-            <li style="list-style:none;">
-              
-              <a href="/help/articles/how-to-integrate-horntell-center" class="post-link">
-                <p class="post-title" style="font-weight:300">How to integrate the JS widget (aka Horntell Center)?</p>
-              </a>
-              
-            </li>
-          
-            <li style="list-style:none;">
-              
-              <a href="/help/articles/how-to-push-notifications-from-dashboard" class="post-link">
-                <p class="post-title" style="font-weight:300">How to push notifications from dashboard?</p>
-              </a>
-              
-            </li>
-          
-            <li style="list-style:none;">
-              
-              <a href="/help/articles/what-are-various-formats-of-notifications" class="post-link">
-                <p class="post-title" style="font-weight:300">What are various formats of notifications?</p>
-              </a>
-              
-            </li>
-          
-            <li style="list-style:none;">
-              
-              <a href="/help/articles/how-to-customize-content-of-notification-using-html" class="post-link">
-                <p class="post-title" style="font-weight:300">How to customize content of notification using HTML?</p>
-              </a>
-              
-            </li>
-          
-        </ul>
-      </div>
-    
-  </div>
 
-  <!-- <div class="pagination clearfix mb1 mt4">
-  <div class="left">
-    
-      <span class="pagination-item disabled">Newer</span>
-    
-  </div>
-  <div class="right">
-    
-      <span class="pagination-item disabled">Older</span>
-    
-  </div>
+<div class="post-header mb2">
+  <h3>How to customize content of notification using HTML?</h3>
+  <p class="post-meta">Why send just text, when you can send emoticons? ;)</p>
+  <span class="post-meta small">1 minute read</span>
 </div>
- -->
+
+<article class="post-content">
+  <p>We allow you to build your notifications in pure HTML (of course, we will not allow some tags like <code>&lt;form&gt;</code>, but besides those, you can do anything with them.)</p>
+
+<p>If you're reading it, we'll assume that you already know <a href="/help/articles/how-to-push-notifications-from-dashboard">how to push simple notifications</a>. This article will help you understand how to spice up your notifications so that they don't look so 1990s.</p>
+
+<ol>
+<li><p><a href="http://app.horntell.com">Login</a> to your account and click on the <i class="fa fa-bell"></i> icon on any profile. We'll notify our users to follow us on Twitter in this demo. We’ll embed the Follow button right inside the notification.</p></li>
+<li><p>In the "Simple" tab, click on the "Advanced" to expand it. In the HTML section, click inside textarea and then click the <strong>Toggle HTML</strong> button to reveal the raw HTML area.</p></li>
+<li><p>Paste the HTML between the lines in there.</p>
+
+<hr />
+
+<p> &lt;p&gt;&lt;b&gt;You're our most active user last month.&lt;/b&gt; I thought, may be you'd like to stay connected with us on Twitter.&lt;/p&gt;&lt;p style=&quot;font-family: courier;&quot;&gt;- Mohit (CEO, Horntell)&lt;/p&gt;
+ &lt;iframe src=&quot;//platform.twitter.com/widgets/follow_button.html?screen_name=<span style="color:#E76A11;">horntell</span>&amp;amp;show_count=false&quot; allowtransparency=&quot;true&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;font-family: inherit; line-height: 1.42857143; width: 150px; height: 20px;&quot;&gt;&lt;/iframe&gt;</p>
+
+<hr />
+
+<p> <img src="/help/images/articles/html.png" alt="html-content-in-notification" /></p></li>
+</ol>
+
+
+<blockquote><p><strong>Tip:</strong> You can change the part in red color with your own Twitter handle.</p></blockquote>
+
+<ol>
+<li>Hit <strong>Send</strong>. Did you get the notification? Isn't it awesome?</li>
+</ol>
+
+
+</article>
+
+
+
+
+  <div class="py2 post-footer">
+  <img src="/help/images/horntell.icon.sm.png" alt="Horntell" class="" />
+  <p>
+    Horntell allows websites to push Interactive Notifications to their users.
+  </p>
+  <p>
+    Fastest way to get in touch? Twitter (<a href="https://twitter.com/horntell">@horntell</a>).
+  </p>
 </div>
+
+
+
+
+
+
 
       </div>
     </div>
