@@ -5,6 +5,8 @@ summary:    Very handy way to push notifications.
 ---
 While mostly you'll use API to push notifications, pushing from dashboard might be required to do one-time notifications or when testing and developing.
 
+We're assuming that you've got the [JS widget (Horntell Center) integrated]({{site.baseurl/articles/how-to-integrate-horntell-center}}) in your webpage.
+
 1. If you [log in](http://app.horntell.com) your Horntell account</a>, you will see one profile that got created when you got your [Horntell Center integrated]({{site.baseurl}}/articles/how-to-integrate-horntell-center) in your webpage. Did you see it?
 ![profile]({{site.baseurl}}/images/articles/profile.png)
 
