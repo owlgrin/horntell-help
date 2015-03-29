@@ -38,18 +38,18 @@ google_analytics:
 # Optional features
 animated:           true
 show_related_posts: false
-show_post_footers:  false
+show_post_footers:  true
 
 # Disqus post comments
 # (leave blank to disable Disqus)
 disqus_shortname:
 
 # Social icons
-show_social_icons: false
-github_username:
+show_social_icons: true
+github_username: horntell
 stackoverflow_id:
-twitter_username:
-google_plus_id:
+twitter_username: horntell
+google_plus_id: +Horntell
 linkedin_username:
 bitcoin_url:
 paypal_url:
