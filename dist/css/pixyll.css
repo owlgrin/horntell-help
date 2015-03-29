@@ -1430,8 +1430,8 @@ green     #859900  operators, other keywords
   height: auto;
   margin: 0 auto; }
 
-.post-content p {
-  font-size: 18px; }
+.post-content p, .post-content li {
+  font-size: 16px; }
 
 p.capitalize {
   text-transform: capitalize; }
