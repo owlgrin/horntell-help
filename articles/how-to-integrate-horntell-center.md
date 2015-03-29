@@ -23,3 +23,6 @@ The powerful feature of Horntell is the web widget that can be placed on you web
 
 _**Note:** In the JS code snippet, the variable `__ht.app` will already be initialized with correct value for your account. You do **NOT** need to alter this variable._
 	![app-id-already-filled]({{site.baseurl}}/images/app-id-already-filled.png)
+
+***
+Now, you've got the Horntell Center working, let's [send our first push notification]({{site.baseurl}}/articles/how-to-push-notifications-from-dashboard).
