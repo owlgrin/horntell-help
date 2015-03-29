@@ -17,6 +17,7 @@ index:
       - 'What are various formats of notifications?': 'what-are-various-formats-of-notifications'
       - 'How to customize content of notification using HTML?': 'how-to-customize-content-of-notification-using-html'
       - 'How to automatically open urgent notifications?': 'how-to-automatically-open-urgent-notifications'
+      - 'How to iterate with notifications faster using Campaigns?': 'how-to-iterate-with-notifications-faster-using-campaigns'
       # allowed html tags
       # integrating using api
       # how to send emoticons
