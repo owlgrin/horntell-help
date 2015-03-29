@@ -1,6 +1,6 @@
 ---
 layout:     article
-title:      How to integrate the JS widget (aka Horntell Center)
+title:      How to integrate the JS widget (aka Horntell Center)?
 summary:    Horntell Center is the real-time notification center that gets embedded on your site.
 ---
 The powerful feature of Horntell is the web widget that can be placed on you website and can act as the notification center. Horntell Center listens for all the real-time notifications that are pushed from your backend and renders them on your site. Besides this, it also does a lot of non-onvious things like maintaining read/unread status of notifications, buffering unread notifications if you user is not currently online on your site, etc.
