@@ -1,57 +1,27 @@
 ---
 layout:     article
 title:      Terminology
-summary:    There are just 3 important terms in Horntell around which our whole discussion will revolve.
+summary:    However, we've kept all the jargon away, knowing these important terms will always keep us on the same page.
 ---
 
-These are the various terms that we use	in Horntell	and knowing	them would make you	feel right at home,
-when using Horntell.
+There are just a handful important terms in Horntell around which our whole discussion will revolve. They are:
 
-We have put together all the terms	that might sound alien to you in one curated place – here!
+**App**: One Horntell account can be used for more than one web app. Each such web app that you configure in your account is called an **app** in Horntell.
 
-<<<<<<< HEAD
+**Environment**: We understand that before pushing the integration in public, you'd like to test it out in your development environment. Therefore, each app comes with two environments - LIVE (for production) and TEST (for development/testing). The two environments run independently of each other and the data between them is not shared.
+
 **Profiles:** Notifications are user-specific. Your every user has a corresponding profile created in Horntell account. A **user** in your app is called a **profile** in Horntell.
 
-**Horns:** These are the push notifications in Horntell’s terms. (We got tired of typing out the long word **notifications** over and over again. :) ;)
+**Horns:** These are the push notifications in Horntell’s terms. We got tired of typing out the long word **notifications** over and over again, and thus decided to cut a few keystrokes short. ;)
 
 **Campaigns:** In our beta, we found our users hardcoding the notification’s content in their codebase. This meant that to change the content, they’d to go through the long shipping cycle. Ugh! Using campaigns, you can save the content of the horn in your dashboard as a template and put the identifier of the campaign in your codebase. Need to change the content? Do it on the fly from your dashboard. Sweet!
-=======
-If there’s still something you are unsure of, feel free	to write to	your friends at Horntell –
 
-friends@horntell.com.
+**Segments:** Segments are the group of users that share some common characteristics. We have put the following segments in your Horntell account for each app:
 
-### Profiles
+- **All**: everyone.
+- **New**: everyone who signed up less than 3 days ago.
+- **Active**: everyone who signed up more than 30 days ago but was last seen less than 3 days ago.
+- **Slipping Away**: everyone who signed up less than 30 days ago but was last seen more than 7 days ago.
+- **Lost**: everyone who was last seen more than 30 days ago.
 
-Horntell is push-notification platform that focuses on your users. Everything in Horntell happens around your users (at account level), which we call Profiles.
-
-Profiles are the 360 degree profiles for each user of your app. Every user you want to notify has to have a
-corresponding profile in Horntell account. Adding maximum details about them helps in segmenting them in a detailed fashion.
-
-> **Tip**: More details about profile attributes here: http://docs.horntell.com/api/#the-profile-object
-
-### Horns
-
-Horns are the push notifications in Horntell’s dictionary. A horn is much more than a simple Facebook-like notification. A horn can be of multiple formats, which can be remembered by the following acronym: **SALT**.
-
-**S: Simple:** A simple horn is just a heads-up for your users. User cannot interact with the notifications at all except from reading it (or send HTML to make it interactive).
-
-**A: Ask:** A ask horn allows you to ask questions (or surveys) to your users. Ask horn provides the interactivity of buttons that can be clicked to record the response.
-
-**L: Link:** A link horn is the notification which can be clicked upon to direct users to reach on a different page. These are the notifications that you already are aware about.
-
-**T: Talk:** A talk horn allows you to add input interactivity to your notifications. The horn will be supported with an input box in which your user can type in the response. These are great to collect quick feedbacks and talk to your users.
-
-### Segments
-
-Segments are the group of users that share some common characteristics.
-
-We have the following segments in your Horntell account:
-
-1. **All**: everyone.
-2. **New**: everyone who signed up less than 3 days ago.
-3. **Active**: everyone who signed up more than 30 days ago but was last seen less than 3 days ago.
-4. **Slipping Away**: everyone who signed up less than 30 days ago but was last seen more than 7 days ago.
-5. **Lost**: everyone who was last seen more than 30 days ago.
-
-We may open up feature to create your own custom segments in future.
->>>>>>> 121d63d0c639715aeca4872b935d239dad3cdae1
+_**Note:** We may open up feature to create your own custom segments in future._

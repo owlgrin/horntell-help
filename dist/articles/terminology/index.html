@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Terminology &#8211; Horntell | Help</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="There are just 3 important terms in Horntell around which our whole discussion will revolve.">
+    <meta name="description" content="However, we've kept all the jargon away, knowing these important terms will always keep us on the same page.">
     <meta name="author" content="Mohit Mamoria">
     
     <link rel="canonical" href="http://docs.horntell.app/help/dist/articles/terminology/">
@@ -45,12 +45,12 @@
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
 </head>
 
-<body class="">
+<body class="animated fade-in-down">
   <div class="site-wrap">
     <header class="site-header px2 px-responsive">
   <div class="mt2 wrap">
     <div class="measure">
-      <a href="http://docs.horntell.app" class="site-title">Horntell | Help</a>
+      <a href="/help/dist" class="site-title">Horntell | Help</a>
       <nav class="site-nav right">
         <a href="/help/dist/about/">About</a>
 <a href="/help/dist/contact/">Contact</a>
@@ -70,66 +70,35 @@
 
 <div class="post-header mb2">
   <h3>Terminology</h3>
-  <p class="post-meta">There are just 3 important terms in Horntell around which our whole discussion will revolve.</p>
-  <span class="post-meta small">2 minute read</span>
+  <p class="post-meta">However, we've kept all the jargon away, knowing these important terms will always keep us on the same page.</p>
+  <span class="post-meta small">1 minute read</span>
 </div>
 
 <article class="post-content">
-  <p>These are the various terms that we use in Horntell and knowing them would make you feel right at home,
-when using Horntell.</p>
+  <p>There are just a handful important terms in Horntell around which our whole discussion will revolve. They are:</p>
 
-<p>We have put together all the terms  that might sound alien to you in one curated place – here!</p>
+<p><strong>App</strong>: One Horntell account can be used for more than one web app. Each such web app that you configure in your account is called an <strong>app</strong> in Horntell.</p>
 
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-<strong>Profiles:</strong> Notifications are user-specific. Your every user has a corresponding profile created in Horntell account. A <strong>user</strong> in your app is called a <strong>profile</strong> in Horntell.</p>
+<p><strong>Environment</strong>: We understand that before pushing the integration in public, you'd like to test it out in your development environment. Therefore, each app comes with two environments - LIVE (for production) and TEST (for development/testing). The two environments run independently of each other and the data between them is not shared.</p>
 
-<p><strong>Horns:</strong> These are the push notifications in Horntell’s terms. (We got tired of typing out the long word <strong>notifications</strong> over and over again. :) ;)</p>
+<p><strong>Profiles:</strong> Notifications are user-specific. Your every user has a corresponding profile created in Horntell account. A <strong>user</strong> in your app is called a <strong>profile</strong> in Horntell.</p>
 
-<h1><strong>Campaigns:</strong> In our beta, we found our users hardcoding the notification’s content in their codebase. This meant that to change the content, they’d to go through the long shipping cycle. Ugh! Using campaigns, you can save the content of the horn in your dashboard as a template and put the identifier of the campaign in your codebase. Need to change the content? Do it on the fly from your dashboard. Sweet!</h1>
+<p><strong>Horns:</strong> These are the push notifications in Horntell’s terms. We got tired of typing out the long word <strong>notifications</strong> over and over again, and thus decided to cut a few keystrokes short. ;)</p>
 
-<p>If there’s still something you are unsure of, feel free   to write to your friends at Horntell –</p>
+<p><strong>Campaigns:</strong> In our beta, we found our users hardcoding the notification’s content in their codebase. This meant that to change the content, they’d to go through the long shipping cycle. Ugh! Using campaigns, you can save the content of the horn in your dashboard as a template and put the identifier of the campaign in your codebase. Need to change the content? Do it on the fly from your dashboard. Sweet!</p>
 
-<p>friends@horntell.com.</p>
+<p><strong>Segments:</strong> Segments are the group of users that share some common characteristics. We have put the following segments in your Horntell account for each app:</p>
 
-<h3>Profiles</h3>
-
-<p>Horntell is push-notification platform that focuses on your users. Everything in Horntell happens around your users (at account level), which we call Profiles.</p>
-
-<p>Profiles are the 360 degree profiles for each user of your app. Every user you want to notify has to have a
-corresponding profile in Horntell account. Adding maximum details about them helps in segmenting them in a detailed fashion.</p>
-
-<blockquote><p><strong>Tip</strong>: More details about profile attributes here: http://docs.horntell.com/api/#the-profile-object</p></blockquote>
-
-<h3>Horns</h3>
-
-<p>Horns are the push notifications in Horntell’s dictionary. A horn is much more than a simple Facebook-like notification. A horn can be of multiple formats, which can be remembered by the following acronym: <strong>SALT</strong>.</p>
-
-<p><strong>S: Simple:</strong> A simple horn is just a heads-up for your users. User cannot interact with the notifications at all except from reading it (or send HTML to make it interactive).</p>
-
-<p><strong>A: Ask:</strong> A ask horn allows you to ask questions (or surveys) to your users. Ask horn provides the interactivity of buttons that can be clicked to record the response.</p>
-
-<p><strong>L: Link:</strong> A link horn is the notification which can be clicked upon to direct users to reach on a different page. These are the notifications that you already are aware about.</p>
-
-<p><strong>T: Talk:</strong> A talk horn allows you to add input interactivity to your notifications. The horn will be supported with an input box in which your user can type in the response. These are great to collect quick feedbacks and talk to your users.</p>
-
-<h3>Segments</h3>
-
-<p>Segments are the group of users that share some common characteristics.</p>
-
-<p>We have the following segments in your Horntell account:</p>
-
-<ol>
+<ul>
 <li><strong>All</strong>: everyone.</li>
 <li><strong>New</strong>: everyone who signed up less than 3 days ago.</li>
 <li><strong>Active</strong>: everyone who signed up more than 30 days ago but was last seen less than 3 days ago.</li>
 <li><strong>Slipping Away</strong>: everyone who signed up less than 30 days ago but was last seen more than 7 days ago.</li>
 <li><strong>Lost</strong>: everyone who was last seen more than 30 days ago.</li>
-</ol>
+</ul>
 
 
-<p>We may open up feature to create your own custom segments in future.</p>
-
-<blockquote><blockquote><blockquote><blockquote><blockquote><blockquote><blockquote><p>121d63d0c639715aeca4872b935d239dad3cdae1</p></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote>
+<p><em><strong>Note:</strong> We may open up feature to create your own custom segments in future.</em></p>
 
 </article>
 

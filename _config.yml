@@ -11,15 +11,15 @@ destination: ./dist
 index:
     - category: 'Getting Started'
       articles:
-      - Terminology: 'terminology'
-      - What are various formats of notifications?: 'what-are-various-formats-of-notifications'
-      - How can I test things out before pushing it in production? (tell about different environments): 'how-can-i-test-things-out-before-pushing-it-in-production'
-      - How do I integrate the Javascript widget on my website?: 'how-do-i-integrate-the-javascript-widget-on-my-website'
-      - How to calculate the required hash of uid?: 'how-to-calculate-the-required-hash-of-uid'
-      - How to send a notification?: 'how-to-send-a-notification'
-      - How to send a notification using API?: 'how-to-send-a-notification-using-api'
-      - How to setup proper campaigns?: 'how-to-setup-proper-campaigns'
-      - How to use variables in your notifications?: 'how-to-use-variables-in-your-notifications'
+      - 'Terminology': 'terminology'
+      - 'What are various formats of notifications?': 'what-are-various-formats-of-notifications'
+      - 'How can I test things out before pushing it in production? (tell about different environments)': 'how-can-i-test-things-out-before-pushing-it-in-production'
+      - 'How do I integrate the Javascript widget on my website?': 'how-do-i-integrate-the-javascript-widget-on-my-website'
+      - 'How to calculate the required hash of uid?': 'how-to-calculate-the-required-hash-of-uid'
+      - 'How to send a notification?': 'how-to-send-a-notification'
+      - 'How to send a notification using API?': 'how-to-send-a-notification-using-api'
+      - 'How to setup proper campaigns?': 'how-to-setup-proper-campaigns'
+      - 'How to use variables in your notifications?': 'how-to-use-variables-in-your-notifications'
     - category: 'FAQs'
       articles:
        - What does an app mean?: 'what-does-an-app-mean'
@@ -36,7 +36,7 @@ index:
 google_analytics:
 
 # Optional features
-animated:           false
+animated:           true
 show_related_posts: false
 show_post_footers:  false
 
