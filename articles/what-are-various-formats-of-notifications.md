@@ -1,17 +1,19 @@
 ---
 layout:     article
-title:      Notification Formats
-summary:    There are 4 types of notifications in Horntell.
+title:      What are various formats of notifications?
+summary:    Choose the perfect one for every occasion.
 ---
 
-### Horns
+Okay, so here we are - we know how notifications work in Horntell ([read this]({{site.baseurl}}/articles/how-to-push-notifications-from-dashboard), in case you don't know), let’s get to know a bit more about them now.
 
-Horns are the push notifications in Horntell’s dictionary. A horn is much more than a simple Facebook-like notification. A horn can be of multiple formats, which can be remembered by the following acronym: **SALT**.
+Our vision is that in this notification-driven world, notification should not only be "informative" but also "interactive". Horntell gives you option to choose from 4 formats of notifications.
 
-**S: Simple:** A simple horn is just a heads-up for your users. User cannot interact with the notifications at all except from reading it (or send HTML to make it interactive).
+**Simple:** A simple horn is just a heads-up for your users. User cannot interact with the notifications at all except from reading it (or send HTML to make it interactive).
 
-**A: Ask:** A ask horn allows you to ask questions (or surveys) to your users. Ask horn provides the interactivity of buttons that can be clicked to record the response.
+**Ask:** A ask horn allows you to ask questions (or surveys) to your users. Ask horn provides the interactivity of buttons that can be clicked to record the response.
+	![ask-notification]({{site.baseurl}}/images/articles/ask.png)
 
-**L: Link:** A link horn is the notification which can be clicked upon to direct users to reach on a different page. These are the notifications that you already are aware about.
+**Link:** A link horn is the notification which can be clicked upon to direct users to reach on a different page. These are the notifications that you already are aware about.
 
-**T: Talk:** A talk horn allows you to add input interactivity to your notifications. The horn will be supported with an input box in which your user can type in the response. These are great to collect quick feedbacks and talk to your users.
+**Talk:** A talk horn allows you to add input interactivity to your notifications. The horn will be supported with an input box in which your user can type in the response. These are great to collect quick feedbacks and talk to your users.
+	![talk-notification]({{site.baseurl}}/images/articles/talk.png)

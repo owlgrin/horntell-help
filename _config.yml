@@ -13,7 +13,7 @@ index:
       articles:
       - 'Terminology': 'terminology'
       - 'How to integrate the JS widget (aka Horntell Center)?': 'how-to-integrate-horntell-center'
-      - 'What are various formats of notifications?': 'what-are-various-formats-of-notifications'
+      - 'How to push notifications from dashboard?': 'how-to-push-notifications-from-dashboard'
       - 'How can I test things out before pushing it in production? (tell about different environments)': 'how-can-i-test-things-out-before-pushing-it-in-production'
       - 'How to calculate the required hash of uid?': 'how-to-calculate-the-required-hash-of-uid'
       - 'How to send a notification?': 'how-to-send-a-notification'
