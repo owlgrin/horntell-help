@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Horntell | Help</title>
+    <title>How to iterate with notifications faster using Campaigns? &#8211; Horntell | Help</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Interactive Push Notifications for your website">
+    <meta name="description" content="Hardcoding content of notification in your code, slows down the iteration cycle. Let's fix it!">
     <meta name="author" content="Mohit Mamoria">
     
-    <link rel="canonical" href="http://docs.horntell.com/help/">
+    <link rel="canonical" href="http://docs.horntell.com/help/articles/how-to-iterate-with-notifications-faster-using-campaigns/">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/help/css/pixyll.css" type="text/css">
@@ -25,9 +25,9 @@
     <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Horntell | Help">
+    <meta property="og:title" content="How to iterate with notifications faster using Campaigns?">
     <meta property="og:description" content="Interactive Push Notifications for your website">
-    <meta property="og:url" content="http://docs.horntell.com/">
+    <meta property="og:url" content="http://docs.horntell.com/articles/how-to-iterate-with-notifications-faster-using-campaigns/">
     <meta property="og:site_name" content="Horntell | Help">
 
     <!-- Icons -->
@@ -93,89 +93,65 @@
 
     <div class="post p2 p-responsive wrap" role="main">
       <div class="measure">
-        <div class="home">
+        
 
-  <div class="posts">
-    
-      <div class="post">
-        <h3 class="h3 post-title">Getting Started</h3>
-        <ul>
-          
-            <li style="list-style:none;">
-              
-              <a href="/help/articles/terminology" class="post-link">
-                <p class="post-title" style="font-weight:300">Terminology</p>
-              </a>
-              
-            </li>
-          
-            <li style="list-style:none;">
-              
-              <a href="/help/articles/how-to-integrate-horntell-center" class="post-link">
-                <p class="post-title" style="font-weight:300">How to integrate the JS widget (aka Horntell Center)?</p>
-              </a>
-              
-            </li>
-          
-            <li style="list-style:none;">
-              
-              <a href="/help/articles/how-to-push-notifications-from-dashboard" class="post-link">
-                <p class="post-title" style="font-weight:300">How to push notifications from dashboard?</p>
-              </a>
-              
-            </li>
-          
-            <li style="list-style:none;">
-              
-              <a href="/help/articles/what-are-various-formats-of-notifications" class="post-link">
-                <p class="post-title" style="font-weight:300">What are various formats of notifications?</p>
-              </a>
-              
-            </li>
-          
-            <li style="list-style:none;">
-              
-              <a href="/help/articles/how-to-customize-content-of-notification-using-html" class="post-link">
-                <p class="post-title" style="font-weight:300">How to customize content of notification using HTML?</p>
-              </a>
-              
-            </li>
-          
-            <li style="list-style:none;">
-              
-              <a href="/help/articles/how-to-automatically-open-urgent-notifications" class="post-link">
-                <p class="post-title" style="font-weight:300">How to automatically open urgent notifications?</p>
-              </a>
-              
-            </li>
-          
-            <li style="list-style:none;">
-              
-              <a href="/help/articles/how-to-iterate-with-notifications-faster-using-campaigns" class="post-link">
-                <p class="post-title" style="font-weight:300">How to iterate with notifications faster using Campaigns?</p>
-              </a>
-              
-            </li>
-          
-        </ul>
-      </div>
-    
-  </div>
 
-  <!-- <div class="pagination clearfix mb1 mt4">
-  <div class="left">
-    
-      <span class="pagination-item disabled">Newer</span>
-    
-  </div>
-  <div class="right">
-    
-      <span class="pagination-item disabled">Older</span>
-    
-  </div>
+<div class="post-header mb2">
+  <h3>How to iterate with notifications faster using Campaigns?</h3>
+  <p class="post-meta">Hardcoding content of notification in your code, slows down the iteration cycle. Let's fix it!</p>
+  <span class="post-meta small">1 minute read</span>
 </div>
- -->
+
+<article class="post-content">
+  <p>We've an <a href="http://docs.horntell.com/api/#horns">API endpoint</a>, which can be used to send horns to single or multiple profiles, but it ahs a major drawback.</p>
+
+<p>There's a problem when you hard-code the content of horns in your codebase, commit it and push it to production. The problem is that, if you want to change the content of horns, you’ll have to repeat the whole cycle of <strong>code - commit - ship</strong> to get it done. This sucks. And campaigns solve this problem.</p>
+
+<p>Campaigns allow you to keep the horns stored as templates in your account and when you need to send a horn, simply use API endpoint to run a particular campaign. This has two benefits over hard-coding horn’s data in the codebase:
+    - You can modify horn's content really quickly from your Horntell dashboard - without touching your codebase ever.
+    - The stats to all the horns under one campaign can be seen together for analysis.</p>
+
+<p>Here's how to create a campaign.</p>
+
+<ol>
+<li><p>After <a href="http://app.horntell.com">logging in</a> your Horntell account, go to the <strong>Campaigns</strong> section from the menu on the left hand side.</p></li>
+<li><p>Hit the <strong>Create New</strong> button.</p></li>
+<li><p>The wizard is a three step process. We'll start by entering the name and description of the campaign.
+ <img src="/help/images/articles/campaign-intro.png" alt="campaign-intro" /></p></li>
+<li><p>Then, we will define the template of horn. Remember, you can add the variables that you store in the profile object for each user. This way, horns can be personalised.
+ <img src="/help/images/articles/campaign-horn.png" alt="campaign-horn" /></p></li>
+<li><p>Finally, when you are satisfied with your campaign, review it and run it. Campaigns can be in two states, "stopped" and "running". Only the running campaigns can be fired using API/dashboard.
+ <img src="/help/images/articles/campaign-review.png" alt="campaign-review" /></p></li>
+<li><p>Now, the created campaign can be fired for single or multiple profiles using this <a href="http://docs.horntell.com/api/#campaigns">API endpoint</a> or from dashboard using the steps below.</p>
+
+<ol>
+<li>Go to any profile and hit the <i class="fa fa-rocket"></i> icon to fire a campaign for that profile.</li>
+<li>In the small window that opens up, press the <strong>Trigger</strong> button corresponding to the campaign you want to fire.</li>
+</ol>
+</li>
+</ol>
+
+
+</article>
+
+
+
+
+  <div class="py2 post-footer">
+  <img src="/help/images/horntell.icon.sm.png" alt="Horntell" class="" />
+  <p>
+    Horntell allows websites to push Interactive Notifications to their users.
+  </p>
+  <p>
+    Fastest way to get in touch? Twitter (<a href="https://twitter.com/horntell">@horntell</a>).
+  </p>
 </div>
+
+
+
+
+
+
 
       </div>
     </div>
