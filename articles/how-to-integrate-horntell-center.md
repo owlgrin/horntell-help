@@ -17,7 +17,6 @@ The powerful feature of Horntell is the web widget that can be placed on you web
 
 	- **uid**: This is the unique identifier for the user in your app. (Primary Key)
 	- **uid_hash**: This is the HMAC SHA256 hash of profile’s uid with your app’s secret key.
-	- **signedup_at**: This is the UNIX timestamp (in UTC) of the user when she first signed up for your app.
 
 4. Besides these required parameters, you can also send the optional data that you want to keep in the profile. More information about various profile attributes can be found at: [http://docs.horntell.com/api/#profiles](http://docs.horntell.com/api/#profiles).
 
