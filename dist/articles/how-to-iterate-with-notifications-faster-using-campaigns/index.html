@@ -103,34 +103,43 @@
 </div>
 
 <article class="post-content">
-  <p>We've an <a href="http://docs.horntell.com/api/#horns">API endpoint</a>, which can be used to send horns to single or multiple profiles, but it ahs a major drawback.</p>
+  <p>We’ve an <a href="http://docs.horntell.com/api/#horns">API endpoint</a>, which can be used to send horns to single or multiple profiles, but it ahs a major drawback.</p>
 
-<p>There's a problem when you hard-code the content of horns in your codebase, commit it and push it to production. The problem is that, if you want to change the content of horns, you’ll have to repeat the whole cycle of <strong>code - commit - ship</strong> to get it done. This sucks. And campaigns solve this problem.</p>
+<p>There’s a problem when you hard-code the content of horns in your codebase, commit it and push it to production. The problem is that, if you want to change the content of horns, you’ll have to repeat the whole cycle of <strong>code - commit - ship</strong> to get it done. This sucks. And campaigns solve this problem.</p>
 
 <p>Campaigns allow you to keep the horns stored as templates in your account and when you need to send a horn, simply use API endpoint to run a particular campaign. This has two benefits over hard-coding horn’s data in the codebase:
-    - You can modify horn's content really quickly from your Horntell dashboard - without touching your codebase ever.
-    - The stats to all the horns under one campaign can be seen together for analysis.</p>
+	- You can modify horn’s content really quickly from your Horntell dashboard - without touching your codebase ever.
+	- The stats to all the horns under one campaign can be seen together for analysis.</p>
 
-<p>Here's how to create a campaign.</p>
-
-<ol>
-<li><p>After <a href="http://app.horntell.com">logging in</a> your Horntell account, go to the <strong>Campaigns</strong> section from the menu on the left hand side.</p></li>
-<li><p>Hit the <strong>Create New</strong> button.</p></li>
-<li><p>The wizard is a three step process. We'll start by entering the name and description of the campaign.
- <img src="/help/images/articles/campaign-intro.png" alt="campaign-intro" /></p></li>
-<li><p>Then, we will define the template of horn. Remember, you can add the variables that you store in the profile object for each user. This way, horns can be personalised.
- <img src="/help/images/articles/campaign-horn.png" alt="campaign-horn" /></p></li>
-<li><p>Finally, when you are satisfied with your campaign, review it and run it. Campaigns can be in two states, "stopped" and "running". Only the running campaigns can be fired using API/dashboard.
- <img src="/help/images/articles/campaign-review.png" alt="campaign-review" /></p></li>
-<li><p>Now, the created campaign can be fired for single or multiple profiles using this <a href="http://docs.horntell.com/api/#campaigns">API endpoint</a> or from dashboard using the steps below.</p>
+<p>Here’s how to create a campaign.</p>
 
 <ol>
-<li>Go to any profile and hit the <i class="fa fa-rocket"></i> icon to fire a campaign for that profile.</li>
-<li>In the small window that opens up, press the <strong>Trigger</strong> button corresponding to the campaign you want to fire.</li>
+  <li>
+    <p>After <a href="http://app.horntell.com">logging in</a> your Horntell account, go to the <strong>Campaigns</strong> section from the menu on the left hand side.</p>
+  </li>
+  <li>
+    <p>Hit the <strong>Create New</strong> button.</p>
+  </li>
+  <li>
+    <p>The wizard is a three step process. We’ll start by entering the name and description of the campaign.
+ <img src="/help/images/articles/campaign-intro.png" alt="campaign-intro" /></p>
+  </li>
+  <li>
+    <p>Then, we will define the template of horn. Remember, you can add the variables that you store in the profile object for each user. This way, horns can be personalised.
+ <img src="/help/images/articles/campaign-horn.png" alt="campaign-horn" /></p>
+  </li>
+  <li>
+    <p>Finally, when you are satisfied with your campaign, review it and run it. Campaigns can be in two states, “stopped” and “running”. Only the running campaigns can be fired using API/dashboard.
+ <img src="/help/images/articles/campaign-review.png" alt="campaign-review" /></p>
+  </li>
+  <li>
+    <p>Now, the created campaign can be fired for single or multiple profiles using this <a href="http://docs.horntell.com/api/#campaigns">API endpoint</a> or from dashboard using the steps below.</p>
+    <ol>
+      <li>Go to any profile and hit the <i class="fa fa-rocket"></i> icon to fire a campaign for that profile.</li>
+      <li>In the small window that opens up, press the <strong>Trigger</strong> button corresponding to the campaign you want to fire.</li>
+    </ol>
+  </li>
 </ol>
-</li>
-</ol>
-
 
 </article>
 
@@ -140,7 +149,7 @@
   <div class="py2 post-footer">
   <img src="/help/images/horntell.icon.sm.png" alt="Horntell" class="" />
   <p>
-    Horntell allows websites to push Interactive Notifications to their users.
+    Horntell provides a brand new framework for notifications, called Cards.
   </p>
   <p>
     Fastest way to get in touch? Twitter (<a href="https://twitter.com/horntell">@horntell</a>).

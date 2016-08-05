@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>How to get Google OAuth Client ID for web? &#8211; Horntell | Help</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="For payments to work securely, the user is authenticated using a Google account on the phone.">
+    <meta name="author" content="Mohit Mamoria">
+    
+    <link rel="canonical" href="http://docs.horntell.com/help/articles/how-to-get-google-oauth-client-id-for-web/">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/help/css/pixyll.css" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    
+
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="How to get Google OAuth Client ID for web?">
+    <meta property="og:description" content="Interactive Push Notifications for your website">
+    <meta property="og:url" content="http://docs.horntell.com/articles/how-to-get-google-oauth-client-id-for-web/">
+    <meta property="og:site_name" content="Horntell | Help">
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+</head>
+
+<body class="animated fade-in-down">
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="/help" class="site-title">Horntell | Help</a>
+      <nav class="site-nav right">
+        <a href="http://app.horntell.com">Go To Horntell <i class="fa fa-angle-double-right"></i></a>
+
+      </nav>
+      <div class="clearfix"></div>
+      
+        <div class="social-icons">
+  <div class="left">
+    
+      <a class="fa fa-github" href="https://github.com/horntell"></a>
+    
+    
+    <a class="fa fa-rss" href="/help/feed.xml"></a>
+    
+      <a class="fa fa-twitter" href="https://twitter.com/horntell"></a>
+    
+    
+      <a class="fa fa-google-plus" href="https://plus.google.com/+Horntell/posts"></a>
+    
+    
+      <a class="fa fa-envelope" href="mailto:hello@horntell.com"></a>
+    
+    
+  </div>
+  <div class="right">
+    
+    
+    
+  </div>
+</div>
+<div class="clearfix"></div>
+
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+<div class="post-header mb2">
+  <h3>How to get Google OAuth Client ID for web?</h3>
+  <p class="post-meta">For payments to work securely, the user is authenticated using a Google account on the phone.</p>
+  <span class="post-meta small">3 minute read</span>
+</div>
+
+<article class="post-content">
+  <p><strong>Payments via Actionable Cards</strong> is the most interesting feature of Horntell. Using it, your business can ask for payments via Actionable Cards itself. Be it through your mobile app or your website - payments work seamlessly. Besides making payments easy and seamless experience, Horntell strives to keep the security around it top notch too.</p>
+
+<p>While security on web is a solved problem, for Android, we require a little effort from you to make sure payments happen securely. The effort includes creating a key in Google Cloud dashboard and pasting it in your Android app’s <code class="highlighter-rouge">AndroidManifest.xml</code> file.</p>
+
+<blockquote>
+  <p><strong>Note:</strong> This step is highliy recommended but not required if you do not intend to accept payments via Cards.</p>
+</blockquote>
+
+<p>Here’s what you will need handy when creating Google OAuth Client ID for web:</p>
+
+<ul>
+  <li>
+    <p>Package name of your Android app. <em>eg. com.example</em></p>
+  </li>
+  <li>
+    <p>SHA-1 signing-certificate fingerprint (explained below). <em>eg. 12:34:56:78:90:AB:CD:EF:12:34:56:78:90:AB:CD:EF:AA:BB:CC:DD</em></p>
+  </li>
+</ul>
+
+<p>Here’s how to get the Google OAuth Client ID for web:</p>
+
+<ol>
+  <li>
+    <p>Go to Google Cloud: <a href="https://cloud.google.com">https://cloud.google.com</a>.</p>
+  </li>
+  <li>
+    <p>Sign in to <strong>Console</strong> by clicking the button in the top-right corner.</p>
+  </li>
+  <li>
+    <p>You will land inside the console. Now, you need to head to the <strong>API Manager</strong> (<a href="https://console.cloud.google.com/apis">https://console.cloud.google.com/apis</a>. It can be found by clicking on the hamburger menu in the top-left corner.</p>
+  </li>
+  <li>
+    <p>Go to the <strong>Credentials</strong> section from the menu on the left.</p>
+  </li>
+  <li>
+    <p>If you haven’t created any project before in Google Cloud, you will be prompted to create a new project right now. All it takes to create a project is the name of the project. Just put your app’s name and hit <strong>Create</strong>.</p>
+  </li>
+  <li>
+    <p>If you already have a project in Google Cloud related to your app, select the correct project from the drop down using the drop-down menu on the top.</p>
+  </li>
+  <li>
+    <p>Once inside the <strong>Credentials</strong> section, you will need to create two credentials - one for Web and another for Android. Let’s start by creating for Android. Click on the <strong>Create credentials</strong> button and select <strong>OAuth client ID</strong>.</p>
+  </li>
+  <li>
+    <p>When creating the client ID, choose <strong>Android</strong>, give it a name (eg. Awesome App Android Client), enter the SHA-1 signing-certificate fingerprint and the package name.</p>
+
+    <p>To get the SHA-1 signing-certificate fingerprint, you will need to use the Keytool utility.</p>
+
+    <ul>
+      <li>
+        <p>Make note of keystore you are using to sign the <code class="highlighter-rouge">.apk</code>. You will need to specifically make note of the alias that you are using and the path to the keystore.</p>
+      </li>
+      <li>
+        <p>Run the following command in the terminal:</p>
+
+        <p><code class="highlighter-rouge">keytool -exportcert -alias &lt;keystore_alias&gt; -keystore &lt;keystore_path&gt; -list -v</code></p>
+
+        <p>For example, to get debug certificate fingerprint:</p>
+
+        <p><code class="highlighter-rouge">keytool -exportcert -list -v -alias androiddebugkey -keystore ~/.android/debug.keystore</code></p>
+      </li>
+      <li>
+        <p>The keytool utility prompts you to enter a password for the keystore. The default password for the debug keystore is <code class="highlighter-rouge">android</code>. The keytool then prints the fingerprint to the terminal. For example:</p>
+
+        <p><code class="highlighter-rouge">Certificate fingerprint: SHA1: DA:39:A3:EE:5E:6B:4B:0D:32:55:BF:EF:95:60:18:90:AF:D8:07:09</code></p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Hit <strong>Create</strong>.</p>
+  </li>
+  <li>
+    <p>Difficult part is done. We’ve create one OAuth client successfully. We’ll need to create one more - for the web, and put its Client ID in the Horntell dashboard when enabling Payments for your account.</p>
+  </li>
+  <li>
+    <p>Inside the <strong>Credentials</strong> section, click on the <strong>Create credentials</strong> button and select <strong>OAuth client ID</strong>.</p>
+  </li>
+  <li>
+    <p>When creating the second client ID, choose <strong>Web application</strong>, give it a name (eg. Awesome App Web Client) and hit <strong>Create</strong>.</p>
+  </li>
+  <li>
+    <p>We’ve both the client ID ready now. We’ll need to copy the OAuth Client ID for the web and enter in the Horntell dashboard when enabling payments.</p>
+  </li>
+</ol>
+
+<hr />
+<p>Now, you can go ahead and submit the details to us for review - post which, Payments will be enabled in your account.</p>
+
+</article>
+
+
+
+
+  <div class="py2 post-footer">
+  <img src="/help/images/horntell.icon.sm.png" alt="Horntell" class="" />
+  <p>
+    Horntell provides a brand new framework for notifications, called Cards.
+  </p>
+  <p>
+    Fastest way to get in touch? Twitter (<a href="https://twitter.com/horntell">@horntell</a>).
+  </p>
+</div>
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+  <div class="p2 wrap">
+    <div class="measure mt1 center">
+      <small>
+        If this article couldn't answer your question still, feel free to write to your friends at Horntell: <a href="mailto:friends@horntell.com">friends@horntell.com</a>.
+      </small>
+    </div>
+  </div>
+</footer>
+
+
+
+</body>
+</html>

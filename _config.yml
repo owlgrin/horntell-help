@@ -13,6 +13,7 @@ index:
       articles:
       - 'Terminology': 'terminology'
       - 'How to integrate the JS widget (aka Horntell Center)?': 'how-to-integrate-horntell-center'
+      - 'How to get Google OAuth Client ID for web?': 'how-to-get-google-oauth-client-id-for-web'
       - 'How to push notifications from dashboard?': 'how-to-push-notifications-from-dashboard'
       - 'What are various formats of notifications?': 'what-are-various-formats-of-notifications'
       - 'How to customize content of notification using HTML?': 'how-to-customize-content-of-notification-using-html'
@@ -60,10 +61,15 @@ share_reddit: false
 share_stumbleupon: false
 
 # Build settings
-markdown:     rdiscount
+markdown:     kramdown
 redcarpet:
   extensions: ['smart', 'tables', 'with_toc_data']
 permalink:    pretty
 paginate:     10
 sass:
   compressed: true
+gems:
+  - jekyll-paginate
+  - jekyll-sitemap
+# https://github.com/jekyll/jekyll/issues/2938
+exclude: [vendor]

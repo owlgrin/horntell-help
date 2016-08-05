@@ -103,7 +103,7 @@
 </div>
 
 <article class="post-content">
-  <h4>Environments</h4>
+  <h4 id="environments">Environments</h4>
 
 <p>You, as an user, can manage multiple apps under same account. And each app has two environments - LIVE (for production) and TEST (for development and testing).</p>
 
@@ -113,9 +113,9 @@
 
 <p>Let’s flip it into <strong>test environment</strong> and get going.</p>
 
-<h4>Integration</h4>
+<h4 id="integration">Integration</h4>
 
-<p>The important Keys and JS code snippet can be found in your account (under [APP] > Settings > Integrate): http://app.horntell.com/#/app/settings/integrate.</p>
+<p>The important Keys and JS code snippet can be found in your account (under [APP] &gt; Settings &gt; Integrate): http://app.horntell.com/#/app/settings/integrate.</p>
 
 <p><img src="http://docs.horntell.com/images/integration.png" alt="integration-code" /></p>
 
@@ -123,11 +123,16 @@
 You’ll need to paste in the similar looking JS code snippet in all webpages on which you need the notification center. Because notifications are user-specific, you’ll need to pass in a few parameters to give it knowledge about the user:</p>
 
 <ol>
-<li><p><strong>uid</strong>: The unique identifier of the logged in user in your system. (Primary Key)</p></li>
-<li><p><strong>uid_hash</strong>: HMAC SHA256 hash of uid using the app’s secret as the salt. (security reasons)</p></li>
-<li><p><strong>signedup_at</strong>: UNIX timestamp in UTC when the user signed up in your app.</p></li>
+  <li>
+    <p><strong>uid</strong>: The unique identifier of the logged in user in your system. (Primary Key)</p>
+  </li>
+  <li>
+    <p><strong>uid_hash</strong>: HMAC SHA256 hash of uid using the app’s secret as the salt. (security reasons)</p>
+  </li>
+  <li>
+    <p><strong>signedup_at</strong>: UNIX timestamp in UTC when the user signed up in your app.</p>
+  </li>
 </ol>
-
 
 <p>Besides these required parameters, you can pass in additional optional data that will be added in the profile of the user. Why this additional data? Two reasons:</p>
 
@@ -145,7 +150,7 @@ You’ll need to paste in the similar looking JS code snippet in all webpages on
   <div class="py2 post-footer">
   <img src="/help/images/horntell.icon.sm.png" alt="Horntell" class="" />
   <p>
-    Horntell allows websites to push Interactive Notifications to their users.
+    Horntell provides a brand new framework for notifications, called Cards.
   </p>
   <p>
     Fastest way to get in touch? Twitter (<a href="https://twitter.com/horntell">@horntell</a>).
