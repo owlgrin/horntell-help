@@ -104,9 +104,9 @@
 </div>
 
 <article class="post-content">
-  <p><strong>Payments via Actionable Cards</strong> is the most interesting feature of Horntell. Using it, your business can ask for payments via Actionable Cards itself. Be it through your mobile app or your website - payments work seamlessly. Besides making payments easy and seamless experience, Horntell strives to keep the security around it top notch too.</p>
+  <p><strong>Payments via Assistive Cards</strong> is the most interesting feature of Horntell. Using it, your business can ask for payments via Cards themselves. Besides making payments easy and seamless experience, Horntell strives to keep the security around it top notch too.</p>
 
-<p>While security on web is a solved problem, for Android, we require a little effort from you to make sure payments happen securely. The effort includes creating a key in Google Cloud dashboard and pasting it in your Android app’s <code class="highlighter-rouge">AndroidManifest.xml</code> file.</p>
+<p>For high security and therefore less fraud cases and chargebacks, we need you to generate a key in Google Cloud dashboard and pasting it in your Android app’s <code class="highlighter-rouge">AndroidManifest.xml</code> file.</p>
 
 <blockquote>
   <p><strong>Note:</strong> This step is highliy recommended but not required if you do not intend to accept payments via Cards.</p>
@@ -125,7 +125,7 @@
 
 <p>Here’s how to get the Google OAuth Client ID for web:</p>
 
-<ol>
+<ul>
   <li>
     <p>Go to Google Cloud: <a href="https://cloud.google.com">https://cloud.google.com</a>.</p>
   </li>
@@ -185,9 +185,14 @@
     <p>When creating the second client ID, choose <strong>Web application</strong>, give it a name (eg. Awesome App Web Client) and hit <strong>Create</strong>.</p>
   </li>
   <li>
-    <p>We’ve both the client ID ready now. We’ll need to copy the OAuth Client ID for the web and enter in the Horntell dashboard when enabling payments.</p>
+    <p>We’ve both the client ID ready now. We’ll need to copy the OAuth Client ID for the web and enter in the Horntell dashboard when enabling payments. And also add the following line with the correct value to your <code class="highlighter-rouge">AndroidManifest.xml</code>:</p>
   </li>
-</ol>
+</ul>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;meta-data</span>
+	<span class="na">android:name=</span><span class="s">"HORNTELL_GOOGLE_OAUTH_WEB_CLIENT_ID"</span>
+	<span class="na">android:value=</span><span class="s">"780816631155-gbvyo1o7r2pn95qc4ei9d61io4uh48hl.apps.googleusercontent.com"</span>
+<span class="nt">/&gt;</span></code></pre></figure>
 
 <hr />
 <p>Now, you can go ahead and submit the details to us for review - post which, Payments will be enabled in your account.</p>
