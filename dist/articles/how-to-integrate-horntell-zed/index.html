@@ -100,43 +100,64 @@
 <div class="post-header mb2">
   <h3>How to integrate the Android SDK (aka Horntell Zed)?</h3>
   <p class="post-meta">Horntell Zed is the personal assistant that gets embedded in your app and delivers Assistive Cards.</p>
-  <span class="post-meta small">1 minute read</span>
+  <span class="post-meta small">3 minute read</span>
 </div>
 
 <article class="post-content">
-  <p>The powerful feature of Horntell is the web widget that can be placed on you website and can act as the notification center. Horntell Center listens for all the real-time notifications that are pushed from your backend and renders them on your site. Besides this, it also does a lot of non-onvious things like maintaining read/unread status of notifications, buffering unread notifications if you user is not currently online on your site, etc.</p>
+  <p>The delivery mechanism of Assistive Cards is the personal assistant that Horntell creates for your Android app. Horntell Zed listens for all the real-time Assistive Cards that are pushed from your backend servers and delivers them to your users. Besides this, it also does a lot of non-onvious things like maintaining read/unread status of Cards, buffering unread Cards if your user is currently acting on any previous sent Card, etc.</p>
 
 <blockquote>
   <p><strong>Tip:</strong> It’s best to get your technology team do this integration for you. It will take a couple of minutes for them to do this.</p>
 </blockquote>
 
-<ol>
+<ul>
   <li>
     <p>When you first log in you account, you will see a switch in top-right corner of your account which lets you switch between <strong>Live</strong> and <strong>Test</strong> environments. Use test environment when working locally and live environment in production.
- <img src="/help/images/environment-switch.png" alt="app-environments" /></p>
+  <img src="/help/images/environment-switch.png" alt="app-environments" /></p>
   </li>
   <li>
     <p>Once the environment is set, you need to find the integration code by clicking on your app’s name in top-right corner and then clicking on <strong>Settings</strong>. Under the <strong>Integrate</strong> tab, you will find the API keys and integration code.
- <img src="/help/images/integration-keys.png" alt="integration-keys" /></p>
+  <img src="/help/images/integration-keys.png" alt="integration-keys" /></p>
   </li>
   <li>
-    <p>You will need to paste the widget code in the webpage where you want to show notifications. As the notifications are based on the logged-in user in your app, you will need to fill the values in these variables dynamically using the server-side language that you are using.</p>
-
-    <ul>
-      <li><strong>uid</strong>: This is the unique identifier for the user in your app. (Primary Key)</li>
-      <li><strong>uid_hash</strong>: This is the HMAC SHA256 hash of profile’s uid with your app’s secret key.</li>
-    </ul>
+    <p>You will need to paste the code in the <code class="highlighter-rouge">build.gradle</code> file of the Android app. The latest version of Zed will be found in your account that will replace <strong>X.Y.Z</strong> in the code below.</p>
   </li>
-  <li>
-    <p>Besides these required parameters, you can also send the optional data that you want to keep in the profile. More information about various profile attributes can be found at: <a href="http://docs.horntell.com/api/#profiles">http://docs.horntell.com/api/#profiles</a>.</p>
-  </li>
-</ol>
+</ul>
 
-<p><em><strong>Note:</strong> In the JS code snippet, the variable <code class="highlighter-rouge">__ht.app</code> will already be initialized with correct value for your account. You do <strong>NOT</strong> need to alter this variable.</em>
-	<img src="/help/images/app-id-already-filled.png" alt="app-id-already-filled" /></p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">compile 'com.horntell:zed:X.Y.Z'</code></pre></figure>
+
+<ul>
+  <li>As the Cards are pushed to the logged-in user in your app, you will need to initialize the SDK dynamically at the point where you authenticate your user. Make sure you calculate the “UID_HASH” at your server and send it in response to the user authentication call. Upon receiving this hash from the server, pass it to Horntell. DO NOT REVEAL the App’s secret in your shipped app anywhere. (More about hashing is available <a href="http://docs.horntell.com/api/#hashing">here</a>).</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Profile</span> <span class="n">profile</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Profile</span><span class="o">();</span>
+
+<span class="c1">// UID is the unique identifier for the user in your app. (Primary Key)</span>
+<span class="n">profile</span><span class="o">.</span><span class="na">setUid</span><span class="o">(</span><span class="cm">/* UID */</span><span class="o">);</span>
+
+<span class="c1">// UID_HASH is the HMAC SHA256 hash of profile’s uid with your app’s secret key.</span>
+<span class="n">profile</span><span class="o">.</span><span class="na">setUidHash</span><span class="o">(</span><span class="cm">/* UID_HASH */</span><span class="o">);</span>
+
+<span class="c1">// Additional Information to save for this profile.</span>
+<span class="n">profile</span><span class="o">.</span><span class="na">setEmail</span><span class="o">(</span><span class="s">"email@example.com"</span><span class="o">);</span>
+
+<span class="k">new</span> <span class="nf">Horntell</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="s">"/* APP_ID */"</span><span class="o">,</span> <span class="n">profile</span><span class="o">).</span><span class="na">start</span><span class="o">();</span></code></pre></figure>
+
+<blockquote>
+  <p><strong>Tip:</strong> In the code snippet, the variable <code class="highlighter-rouge">APP_ID</code> will already be initialized with correct value for your account. You do <strong>NOT</strong> need to alter this variable.</p>
+</blockquote>
+
+<ul>
+  <li>Last step involves, generating a Google OAuth Web Client ID and adding it to your <code class="highlighter-rouge">AndroidManifest.xml</code> file. This is required because some of the actions in the Cards, like Payments, must be authenticated with the information present on the device (that is, the user’s logged in Google account). You can follow the <a href="/help/articles/how-to-get-google-oauth-client-id-for-web/">steps to generate Google OAuth Web Client ID</a> and then add the following line with the correct value to your <code class="highlighter-rouge">AndroidManifest.xml</code>:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;meta-data</span>
+	<span class="na">android:name=</span><span class="s">"HORNTELL_GOOGLE_OAUTH_WEB_CLIENT_ID"</span>
+	<span class="na">android:value=</span><span class="s">"780816631155-gbvyo1o7r2pn95qc4ei9d61io4uh48hl.apps.googleusercontent.com"</span>
+<span class="nt">/&gt;</span></code></pre></figure>
 
 <hr />
-<p>Now, you’ve got the Horntell Center working, let’s <a href="/help/articles/how-to-push-notifications-from-dashboard">send our first push notification</a>.</p>
+<p>Now, we’ve got the Horntell Zed integrated, we can <a href="/help/articles/how-to-push-notifications-from-dashboard">begin pushing Assistive Cards to our users</a>.</p>
 
 </article>
 
@@ -144,9 +165,9 @@
 
 
   <div class="py2 post-footer">
-  <img src="/help/images/horntell.icon.sm.png" alt="Horntell" class="" />
+  <img src="/help/images/horntell.icon.png" alt="Horntell" class="" />
   <p>
-    Horntell provides a brand new framework for notifications, called Cards.
+    Horntell's Assistive Cards get things done in a entirely new way.
   </p>
   <p>
     Fastest way to get in touch? Twitter (<a href="https://twitter.com/horntell">@horntell</a>).
