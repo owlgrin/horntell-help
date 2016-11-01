@@ -12,7 +12,7 @@ index:
     - category: 'Getting Started'
       articles:
       - 'Terminology': 'terminology'
-      - 'How to integrate the JS widget (aka Horntell Center)?': 'how-to-integrate-horntell-center'
+      - 'How to integrate the Android SDK (aka Horntell Zed)?': 'how-to-integrate-horntell-zed'
       - 'How to get Google OAuth Client ID for web?': 'how-to-get-google-oauth-client-id-for-web'
       - 'How to push notifications from dashboard?': 'how-to-push-notifications-from-dashboard'
       - 'What are various formats of notifications?': 'what-are-various-formats-of-notifications'

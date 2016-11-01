@@ -1,3 +1,11 @@
+img.site-brand {
+	height: 30px;
+}
+img + span.site-subbrand {
+	margin-left: 10px;
+    color: #7a7a7a;
+    font-size: 18px;
+}
 .article-summary {
   font-weight: 300;
 }
