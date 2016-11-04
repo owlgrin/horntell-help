@@ -11,7 +11,7 @@ The delivery mechanism of Assistive Cards is the personal assistant that Horntel
 	![app-environments]({{site.baseurl}}/images/environment-switch.png)
 
 - Once the environment is set, you need to find the integration code by clicking on your app’s name in top-right corner and then clicking on **Settings**. Under the **Integrate** tab, you will find the API keys and integration code.
-	![integration-keys]({{site.baseurl}}/images/integration-keys.png)
+	![android-integration-keys]({{site.baseurl}}/images/android-integration-keys.png)
 
 - You will need to paste the code in the `build.gradle` file of the Android app. The latest version of Zed will be found in your account that will replace **X.Y.Z** in the code below.
 {% highlight text %}
