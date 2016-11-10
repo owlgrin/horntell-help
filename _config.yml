@@ -15,9 +15,8 @@ index:
       - 'How to integrate the Android SDK (aka Horntell Zed)?': 'how-to-integrate-horntell-zed'
       - 'How to get Google OAuth Client ID for web?': 'how-to-get-google-oauth-client-id-for-web'
       - 'How to push Assistive Cards from dashboard?': 'how-to-push-assistive-cards-from-dashboard'
+      - 'What is anatomy of a Card?': 'anatomy-of-a-card'
       - 'What are various formats of a Card?': 'what-are-various-formats-of-cards'
-      - 'How to customize content of notification using HTML?': 'how-to-customize-content-of-notification-using-html'
-      - 'How to automatically open urgent notifications?': 'how-to-automatically-open-urgent-notifications'
       - 'How to iterate with notifications faster using Campaigns?': 'how-to-iterate-with-notifications-faster-using-campaigns'
       # allowed html tags
       # integrating using api
