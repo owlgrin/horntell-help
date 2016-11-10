@@ -1184,3 +1184,6 @@ img + span.site-subbrand {
 
 p.capitalize {
   text-transform: capitalize; }
+
+img.img-card {
+  width: 300px; }
