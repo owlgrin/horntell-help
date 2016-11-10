@@ -16,4 +16,4 @@ We're assuming that you've got the [Android SDK (Horntell Zed) integrated]({{sit
 
 - Check the phone where the integrated app is installed and voila, do you see something?
 
-While it was very interesting to send our first Card, we highly recommend you to know more about [various templates of Cards]({{site.baseurl}}/articles/what-are-various-formats-of-notifications) to make most out of them.
+While it was very interesting to send our first Card, we highly recommend you to know more about [various templates of Cards]({{site.baseurl}}/articles/what-are-various-formats-of-cards) to make most out of them.
