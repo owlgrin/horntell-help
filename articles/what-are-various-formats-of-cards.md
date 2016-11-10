@@ -33,6 +33,11 @@ The **Include** part allows you to embed rich content in a Card. The available f
 
 The **action** part allows you to define an action that the user can take in the Card. The currently supported actions are:
 
+- **Reactions**
+
+	The format `reactions` allows the user to send quick sentiments on something. This can be used to collect quick feedbacks.
+	<img src="{{site.baseurl}}/images/articles/cards/Coupon__Feedback.png" alt="Coupon Feedback" class="img-card">
+
 - **Reply**
 
 	The format `reply` allows the user to send back textual input. This can be used to nudge conversations, customer support, etc.
