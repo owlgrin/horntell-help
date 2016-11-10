@@ -45,4 +45,4 @@ new Horntell(this, "/* APP_ID */", profile).start();
 {% endhighlight %}
 
 ***
-Now, we've got the Horntell Zed integrated, we can [begin pushing Assistive Cards to our users]({{site.baseurl}}/articles/how-to-push-notifications-from-dashboard).
+Now, we've got the Horntell Zed integrated, we can [begin pushing Assistive Cards to our users]({{site.baseurl}}/articles/how-to-push-assistive-cards-from-dashboard).
